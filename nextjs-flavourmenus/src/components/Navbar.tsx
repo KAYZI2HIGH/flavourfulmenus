@@ -81,16 +81,16 @@ export const Navbar = () => {
       </div>
       <div
         className={`
-          fixed inset-0 bg-black/50 transition-opacity duration-300 md:hidden
-          ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
+          fixed inset-0 bg-black/50 transition-opacity duration-300 md:hidden overflow-hidden
+          ${isOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}
         `}
         onClick={() => setIsOpen(false)}
       />
       <div
         className={`
           absolute top-0 right-0 w-[80%] max-w-sm h-screen bg-white shadow-lg md:hidden
-          transform transition-transform duration-300 ease-in-out
-          ${isOpen ? "translate-x-0" : "translate-x-full"}
+          transform transition-all duration-300 ease-in-out
+          ${isOpen ? "translate-x-0 visible" : "translate-x-full invisible"}
         `}
       >
         <div className="flex flex-col h-full">

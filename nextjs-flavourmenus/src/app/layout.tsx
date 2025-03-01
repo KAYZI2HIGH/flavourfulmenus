@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-screen min-h-dvh overflow-x-hidden"
+      <body className="w-full min-h-dvh overflow-x-hidden"
       >
         <CartProvider>
         <Navbar/>
