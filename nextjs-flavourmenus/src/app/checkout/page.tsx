@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { submitCheckout } from "@/sanity/writeClient";
 import { toast } from "sonner";
 import { CheckCircle, Loader2 } from "lucide-react";
-import { useEffect } from "react";
 import { nanoid } from "nanoid";
 import dynamic from "next/dynamic";
 const PaystackButton = dynamic(
@@ -30,7 +29,6 @@ const CheckoutPage = () => {
     handleSubmit,
     formState: { errors, isSubmitting, isValid },
     getValues,
-    reset,
   } = useForm<FormData>();
 
   const {name, email, phone, address} = getValues()
@@ -90,11 +88,9 @@ const CheckoutPage = () => {
     };
 
 
-  useEffect(() => {
     if (typeof window !== "undefined" && cartItems.length === 0) {
       router.push("/menu");
     }
-  }, []);
 
   return (
     <div className="w-full bg-gray-50">

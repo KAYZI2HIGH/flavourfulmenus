@@ -1,8 +1,7 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
-import { useRouter } from "next/navigation";
-import React, { useState, createContext, useContext, useEffect } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 import { toast } from "sonner";
 
 interface CartItem {
@@ -22,7 +21,6 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
-  const router = useRouter();
 
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 

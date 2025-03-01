@@ -29,8 +29,8 @@ export async function getMenuItems(): Promise<MenuItem[]> {
 
   const items = await client.fetch<MenuItem[]>(query);
 
-  return items.map((item: any) => ({
+  return items.map((item) => ({
     ...item,
-    image: item.image ? urlFor(item.image).url() : null,
+    image: urlFor(item.image).url(),
   }));
 }

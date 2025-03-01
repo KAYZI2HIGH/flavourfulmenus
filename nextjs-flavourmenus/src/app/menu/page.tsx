@@ -16,7 +16,7 @@ const MenuPage = async() => {
       },
       {} as Record<string, MenuItem[]>
     );
-  const renderRegularItem = (item: any) => (
+  const renderRegularItem = (item: MenuItem) => (
     <div
       key={item._id}
       className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -40,7 +40,7 @@ const MenuPage = async() => {
       </div>
     </div>
   );
-  const renderDealItem = (item: any) => (
+  const renderDealItem = (item: MenuItem) => (
     <div
       key={item._id}
       className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border-2 border-orange-100"
@@ -62,7 +62,7 @@ const MenuPage = async() => {
           <p className="text-gray-600 text-sm mt-1">{item.description}</p>
           <div className="mt-2 flex items-center gap-2">
             <p className="text-2xl font-bold text-orange-600">₦{item.price}</p>
-            {item.originalPrice > item.price && (
+            {item.originalPrice && (item.originalPrice > item.price) && (
               <p className="text-lg text-gray-400 line-through">
                 ₦{item.originalPrice}
               </p>

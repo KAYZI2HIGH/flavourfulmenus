@@ -1,6 +1,6 @@
 
 import { team, values } from "@/constants";
-import { Users, Utensils, Heart, MapPin, Sparkles, UtensilsCrossed } from "lucide-react";
+import { MapPin, Sparkles, UtensilsCrossed } from "lucide-react";
 import Image from "next/image";
 const AboutPage = () => {
   return (
@@ -13,9 +13,9 @@ const AboutPage = () => {
               <h2 className="text-3xl font-bold">Our Story</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 At FoodieDelight, we believe that great food starts with
-                exceptional ingredients and passionate chefs. Since 2015, we've
-                been crafting delicious meals that bring joy to our customers'
-                tables.
+                exceptional ingredients and passionate chefs. Since 2015,
+                we&apos;ve been crafting delicious meals that bring joy to our
+                customers&apos; tables.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">

@@ -11,8 +11,8 @@ const OrderConfirmationPage = () => {
           </div>
           <h1 className="text-4xl font-bold text-gray-900">Order Confirmed!</h1>
           <p className="text-xl text-gray-600">
-            Thank you for your order. We'll start preparing your delicious food
-            right away!
+            Thank you for your order. We&apos;ll start preparing your delicious
+            food right away!
           </p>
           <Link
             href="/"

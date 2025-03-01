@@ -3,7 +3,6 @@ import './globals.css'
 import { Navbar } from "@/components/Navbar";
 import { CartProvider } from "@/context/CartContext";
 import { Toaster } from "sonner";
-import { MarsStroke } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Flavourful Menus",

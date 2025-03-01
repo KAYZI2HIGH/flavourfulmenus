@@ -1,5 +1,5 @@
 import { ArrowRight, Sparkles, Star, UtensilsCrossed } from 'lucide-react';
-import { categories, howItWorks, customerFavorites, sustainabilityFeatures, testimonials, menuItems } from '../constants.js';
+import { categories, howItWorks, customerFavorites, sustainabilityFeatures, testimonials } from '../constants.js';
 import Image from 'next/image';
 import Link from 'next/link.js';
 import AddToCartBtn from '@/components/AddToCartBtn';
@@ -186,7 +186,7 @@ export default async function Home() {
       {/* Chef's Specials Section */}
       {menuItems.ChefsSpecials && (
         <section className="max-w-7xl mx-auto px-4 md:px-10 py-16">
-          <h2 className="text-3xl font-bold mb-12">Chef's Specials</h2>
+          <h2 className="text-3xl font-bold mb-12">Chef&apos;s Specials</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {menuItems.ChefsSpecials.map((dish) => (
               <div
@@ -233,9 +233,9 @@ export default async function Home() {
               <h2 className="text-3xl font-bold">Our Story</h2>
               <p className="text-gray-600 text-lg leading-relaxed">
                 At FoodieDelight, we believe that great food starts with
-                exceptional ingredients and passionate chefs. Since 2015, we've
-                been crafting delicious meals that bring joy to our customers'
-                tables.
+                exceptional ingredients and passionate chefs. Since 2015,
+                we&apos;ve been crafting delicious meals that bring joy to our
+                customers&apos; tables.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
@@ -387,7 +387,7 @@ export default async function Home() {
                 key={testimonial.name}
                 className="bg-white p-6 rounded-lg shadow-sm"
               >
-                <p className="text-gray-600 mb-4">"{testimonial.comment}"</p>
+                <p className="text-gray-600 mb-4">&quor;{testimonial.comment}&quot;</p>
                 <div className="flex items-center">
                   <img
                     src={testimonial.image}
