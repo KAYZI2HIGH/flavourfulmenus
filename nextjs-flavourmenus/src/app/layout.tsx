@@ -17,12 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden"
+      <body className="w-screen min-h-dvh overflow-x-hidden"
       >
         <CartProvider>
-        <Toaster/>
         <Navbar/>
         {children}
+        <Toaster/>
 
         </CartProvider>
       </body>
