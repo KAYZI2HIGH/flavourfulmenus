@@ -4,7 +4,7 @@ import { MapPin, Sparkles, UtensilsCrossed } from "lucide-react";
 import Image from "next/image";
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-6">
       {/* Story Section */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto px-4 md:px-10">

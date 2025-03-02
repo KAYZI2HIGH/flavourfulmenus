@@ -18,8 +18,8 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const {cartItems} = useCart()
   return (
-    <nav className="sticky top-0 w-full bg-white shadow-sm z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 w-full bg-white shadow-sm z-50">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
             <Link

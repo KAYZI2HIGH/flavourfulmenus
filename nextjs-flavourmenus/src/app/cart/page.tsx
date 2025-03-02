@@ -15,7 +15,7 @@ const CartPage = () => {
   const total = subtotal + tax;
   if (cartItems.length === 0) {
     return (
-      <div className="w-full bg-gray-50 min-h-screen">
+      <div className="w-full bg-gray-50 min-h-screen pt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center space-y-6">
           <h1 className="text-4xl font-bold text-gray-900">Your Cart</h1>
           <p className="text-xl text-gray-600">Your cart is empty</p>
@@ -34,60 +34,60 @@ const CartPage = () => {
     <div className="min-h-screen pt-20 pb-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Your Cart</h1>
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           <div className="lg:col-span-2">
             {cartItems.map((item) => (
               <div
                 key={item._id}
-                className="bg-white rounded-xl p-6 mb-4 shadow-sm"
+                className="bg-white rounded-xl p-4 sm:p-6 mb-4 shadow-sm"
               >
-                <div className="flex items-center gap-6">
-                  <Image
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+                  <img
                     src={item.image}
                     alt={item.name}
-                    width={24}
-                    height={24}
-                    className="w-24 h-24 object-cover rounded-lg"
+                    className="w-full sm:w-24 h-48 sm:h-24 object-cover rounded-lg"
                   />
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       {item.name}
                     </h3>
-                    <p className="text-orange-500 font-medium">
+                    <p className="text-orange-500 font-medium mb-3 sm:mb-0">
                       ₦{item.price.toFixed(2)}
                     </p>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-between sm:justify-end gap-4 sm:gap-6">
+                    <div className="flex items-center gap-3 border rounded-lg px-2 py-1">
+                      <button
+                        onClick={() =>
+                          updateQuantity(item._id, item.quantity - 1)
+                        }
+                        className="p-1 hover:bg-gray-100 rounded"
+                      >
+                        <Minus className="h-4 w-4 text-gray-600" />
+                      </button>
+                      <span className="w-8 text-center">{item.quantity}</span>
+                      <button
+                        onClick={() =>
+                          updateQuantity(item._id, item.quantity + 1)
+                        }
+                        className="p-1 hover:bg-gray-100 rounded"
+                      >
+                        <Plus className="h-4 w-4 text-gray-600" />
+                      </button>
+                    </div>
                     <button
-                      onClick={() =>
-                        updateQuantity(item._id, item.quantity - 1)
-                      }
-                      className="p-1 hover:bg-gray-100 rounded"
+                      onClick={() => removeFromCart(item._id)}
+                      className="p-2 hover:bg-red-50 rounded-full text-red-500"
                     >
-                      <Minus className="h-4 w-4 text-gray-600" />
-                    </button>
-                    <span className="w-8 text-center">{item.quantity}</span>
-                    <button
-                      onClick={() =>
-                        updateQuantity(item._id, item.quantity + 1)
-                      }
-                      className="p-1 hover:bg-gray-100 rounded"
-                    >
-                      <Plus className="h-4 w-4 text-gray-600" />
+                      <Trash2 className="h-5 w-5" />
                     </button>
                   </div>
-                  <button
-                    onClick={() => removeFromCart(item._id)}
-                    className="p-2 hover:bg-red-50 rounded-full text-red-500"
-                  >
-                    <Trash2 className="h-5 w-5" />
-                  </button>
                 </div>
               </div>
             ))}
           </div>
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl p-6 shadow-sm sticky top-24">
+            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm sticky top-24">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">
                 Order Summary
               </h2>
@@ -108,9 +108,9 @@ const CartPage = () => {
               </div>
               <Link
                 href={"/checkout"}
-                className="w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors flex items-center justify-center group cursor-pointer"
+                className="w-full bg-orange-500 text-white py-3 px-4 rounded-full font-semibold hover:bg-orange-600 transition-colors flex items-center justify-center group"
               >
-                Proceed to Checkout
+                <span>Proceed to Checkout</span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

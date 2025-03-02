@@ -5,7 +5,7 @@ import { useCart } from "@/context/CartContext";
 import { useForm } from "react-hook-form";
 import { submitCheckout } from "@/sanity/writeClient";
 import { toast } from "sonner";
-import { CheckCircle, Loader2 } from "lucide-react";
+import { CheckCircle, Loader2 } from "lucide-react"; 
 import { nanoid } from "nanoid";
 import dynamic from "next/dynamic";
 const PaystackButton = dynamic(

@@ -20,7 +20,7 @@ export default async function Home() {
   );
 
   return (
-    <div className="w-full ">
+    <div className="w-full pt-6">
       {/* Hero Section */}
       <section className="min-h-screen py-16 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 items-center min-h-[calc(100vh-4rem)]">
@@ -50,7 +50,7 @@ export default async function Home() {
                 Make a Reservation
               </Link>
             </div>
-            <div className="mt-12 flex items-center gap-8">
+            <div className="mt-12 flex items-center gap-4 md:gap-8 w-full">
               <div>
                 <p className="text-3xl font-bold text-gray-900">4.9</p>
                 <p className="text-sm text-gray-600">Customer Rating</p>
